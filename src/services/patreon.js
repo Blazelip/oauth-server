@@ -8,7 +8,7 @@ async function postPatreonToken(code) {
     grant_type: 'authorization_code',
     client_id: 'AmtrHmff3rgLCnwZSepcc4gw5127gMTyFe5X_2q4qMPVGYwkqmCnJrf4C0YDg8gn',
     client_secret: 'fJ_NdSAiYT8MrayjREm8Doo8xOwWyimxznCyQ480LUZVoMtG9g6lojnkMxIFmhhG',
-    redirect_uri: 'https://example.com',
+    redirect_uri: 'https://fastify-oauth-server.onrender.com/patreon/oauth',
   };
 
   try {
