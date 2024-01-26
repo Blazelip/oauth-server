@@ -11,6 +11,7 @@ const start = async () => {
   try {
     await app.listen({
       port: process.env.SERVER_PORT ?? 3000,
+      host: '0.0.0.0',
     });
     console.log(`Server listening on ${app.server.address().port}`);
   } catch (err) {
