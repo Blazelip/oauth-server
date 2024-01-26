@@ -5,7 +5,10 @@ async function routes(fastify) {
 
   fastify.get('/patreon/oauth', async (req, reply) => {
     const { state, code } = req.query;
+    console.log("🚀 ~ fastify.get ~ code:", code);
+    console.log("🚀 ~ fastify.get ~ state:", state);
     const patreonToken = postPatreonToken(code);
+    console.log("🚀 ~ fastify.get ~ patreonToken:", patreonToken);
 
     return patreonToken;
   });
