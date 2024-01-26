@@ -7,7 +7,7 @@ async function routes(fastify) {
     const { state, code } = req.query;
     console.log("🚀 ~ fastify.get ~ code:", code);
     console.log("🚀 ~ fastify.get ~ state:", state);
-    const patreonToken = postPatreonToken(code);
+    const patreonToken = await postPatreonToken(code);
     console.log("🚀 ~ fastify.get ~ patreonToken:", patreonToken);
 
     return patreonToken;
