@@ -1,4 +1,4 @@
-import postPatreonToken from '../services/patreon';
+import postPatreonToken from '../services/patreon.js';
 
 async function routes(fastify) {
   fastify.get('/patreon/oauth', async (req, reply) => {
