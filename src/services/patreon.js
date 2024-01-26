@@ -20,7 +20,7 @@ async function postPatreonToken(code) {
     });
     console.log("🚀 ~ postPatreonToken ~ response:", response);
 
-    const { body: { access_token: token } } = response;
+    const { body: { access_token: token } } = JSON.parse(response);
     console.log(token); // log the response body
     return token;
     // TODO: Process the response body as needed
