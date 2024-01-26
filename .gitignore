@@ -1,0 +1,10 @@
+.vscode/
+/node_modules/
+.idea/*
+
+.DS_Store
+coverage
+*.log
+*.env
+/mongodb/
+upload/
