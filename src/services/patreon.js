@@ -3,7 +3,7 @@ import got from 'got';
 async function postPatreonToken(code) {
   const url = 'https://www.patreon.com/api/oauth2/token';
 
-  const requestBody = {
+  const form = {
     code,
     grant_type: 'authorization_code',
     client_id: 'AmtrHmff3rgLCnwZSepcc4gw5127gMTyFe5X_2q4qMPVGYwkqmCnJrf4C0YDg8gn',
@@ -13,7 +13,7 @@ async function postPatreonToken(code) {
 
   try {
     const response = await got.post(url, {
-      requestBody,
+      form,
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
       },
