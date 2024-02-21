@@ -9,6 +9,8 @@ const migrations = {
   directory: path.join(__dirname, 'src', 'migrations'),
 };
 
+console.log("🚀 ~ migrations.directory:", migrations.directory);
+
 export default {
   client: 'pg',
   connection: {
