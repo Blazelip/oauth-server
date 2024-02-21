@@ -12,17 +12,14 @@ async function requestPatreonToken(code) {
   };
 
   try {
-    console.log('hier');
     const response = await got.post(url, {
       form,
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
       },
     });
-    console.log("🚀 ~ postPatreonToken ~ response:", response)
 
     const responseObj = JSON.parse(response.body);
-    console.log("🚀 ~ postPatreonToken ~ responseObj:", responseObj)
     return responseObj;
   } catch (error) {
     throw new Error('Failed to retrieve access token');

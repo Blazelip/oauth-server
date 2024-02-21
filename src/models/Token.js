@@ -13,9 +13,8 @@ export default class Token extends BaseModel {
       ],
       properties: {
         id: { type: 'integer' },
-        userId: { type: 'string', minLength: 1 },
+        userId: { type: 'integer' },
         accessToken: { type: 'string', minLength: 1 },
-        tokenExpiration: { type: 'string', minLength: 1 },
         refreshToken: { type: 'string', minLength: 1 },
       },
     };

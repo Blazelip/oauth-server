@@ -1,8 +1,16 @@
 import { config } from 'dotenv';
+import knex from 'knex';
+import { Model } from 'objection';
+
 import app from './server.js';
 import routes from './routes/index.js';
+import knexConfig from '../knexfile.js';
 
 config();
+
+const db = knex(knexConfig);
+Model.knex(db);
+
 // Register routes and plugins
 app.register(routes);
 
