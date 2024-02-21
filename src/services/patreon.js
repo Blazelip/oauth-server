@@ -18,8 +18,10 @@ async function postPatreonToken(code) {
         'Content-Type': 'application/x-www-form-urlencoded',
       },
     });
+    console.log("🚀 ~ postPatreonToken ~ response:", response)
 
     const responseObj = JSON.parse(response.body);
+    console.log("🚀 ~ postPatreonToken ~ responseObj:", responseObj)
     return responseObj;
   } catch (error) {
     throw new Error('Failed to retrieve access token');
