@@ -1,6 +1,6 @@
 import got from 'got';
 
-async function postPatreonToken(code) {
+async function requestPatreonToken(code) {
   const url = 'https://www.patreon.com/api/oauth2/token';
 
   const form = {
@@ -12,6 +12,7 @@ async function postPatreonToken(code) {
   };
 
   try {
+    console.log('hier');
     const response = await got.post(url, {
       form,
       headers: {
@@ -28,4 +29,4 @@ async function postPatreonToken(code) {
   }
 }
 
-export default postPatreonToken;
+export default requestPatreonToken;
