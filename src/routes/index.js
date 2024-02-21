@@ -6,6 +6,7 @@ async function routes(fastify) {
 
   fastify.get('/patreon/oauth', async (req) => {
     const { state, code } = req.query;
+    console.log("🚀 ~ fastify.get ~ state:", state)
     console.log("🚀 ~ fastify.get ~ code:", code)
     const {
       access_token: accessToken,
